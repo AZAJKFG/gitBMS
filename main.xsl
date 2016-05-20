@@ -2,16 +2,18 @@
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 xmlns:msxsl="urn:schemas-microsoft-com:xslt">
-    <xsl:key name="zone_by_id" match="/data/zones/zone" use="@zone_id"/>
     <xsl:key name="asset_by_id" match="/data/assets/asset" use="@asset_id"/>
-    <xsl:key name="asset_type_by_id" match="/data/asset_types/asset_type" use="@asset_type_id"/>
+    <xsl:key name="assets_by_type_id" match="/data/assets/asset" use="@asset_type_id"/>
     <xsl:key name="assets_by_zone_id" match="/data/assets/asset" use="@zone_id"/>
     <xsl:key name="assets_by_command_id" match="/data/assets/asset" use="@command_id"/>
     <xsl:key name="assets_by_parent_asset_id" match="/data/assets/asset" use="@parent_asset_id"/>
+    <xsl:key name="asset_type_by_id" match="/data/asset_types/asset_type" use="@asset_type_id"/>
     <xsl:key name="command_by_id" match="/data/commands/command" use="@command_id"/>
     <xsl:key name="commands_by_faction_id" match="/data/commands/command" use="@faction_id"/>
-    <xsl:key name="commands_by_zone_id" match="/data/commands/command" use="@zone_id"/>  
-  
+    <xsl:key name="commands_by_zone_id" match="/data/commands/command" use="@zone_id"/>
+    <xsl:key name="zone_by_id" match="/data/zones/zone" use="@zone_id"/>
+    <xsl:key name="zone_type_by_id" match="/data/zone_types/zone_type" use="@zone_type_id"/>
+
   <xsl:variable name="selected_zone_id">
     <xsl:choose>
       <xsl:when test="/data/@selected_zone_id">
@@ -30,11 +32,16 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt">
 
     <xsl:variable name="curr_section" select="@curr_section" />
       <div style="position:absolute;top:0px;left:0px;width:100%">
-        <div class="zoneBreadcrumbs">
-          <xsl:call-template name="breadcrumbs">
-            <xsl:with-param name="ZONE" select="$CURRZONE" />
-          </xsl:call-template>
-        </div>
+        <xsl:comment>
+          <div class="zoneBreadcrumbs">
+            <xsl:call-template name="breadcrumbs">
+              <xsl:with-param name="ZONE" select="$CURRZONE" />
+            </xsl:call-template>
+          </div>
+
+        </xsl:comment>
+      </div>
+      <div class="navigationStrip">
         <div class="zoneOptions">
           <xsl:for-each select="/data/zones/zone[@parent_zone_id=1]">
             <xsl:sort select="@name"/>
@@ -46,13 +53,13 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt">
               <xsl:value-of select="@name"/>
             </div>
           </xsl:for-each>
-        </div>        
-      </div>
-      <div class="navigationStrip">
-        NAVIGATION STRIP      
+        </div>
       </div>
     <div class="mainArea">
       <xsl:choose>
+        <xsl:when test="substring(/data/@curr_section, 1, 2)='T1'">
+          <xsl:call-template name="mainMap"/>
+        </xsl:when>
         <xsl:when test="substring(/data/@curr_section, 1, 2)='T2'">
           <xsl:call-template name="mainMessages"/>
         </xsl:when>
@@ -126,41 +133,6 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt">
       Zone:<xsl:value-of select="$CURRZONE/@zone_id"/>
     </div>
     
-    <div class="commandList" style="float:left;width:350px;height:600px;">
-      <xsl:variable name="root_command_id">
-        <xsl:choose>
-          <xsl:when test="$COMMAND/@parent_command_id"><xsl:value-of select="$COMMAND/@parent_command_id" /></xsl:when>
-          <xsl:otherwise><xsl:value-of select="$COMMAND/@command_id" /></xsl:otherwise>
-        </xsl:choose>
-      </xsl:variable>
-      <xsl:comment>
-        Root:<xsl:value-of select="$root_command_id"/>  
-      </xsl:comment>
-      <xsl:choose>
-        <xsl:when test="$selected_class='command'">
-          <xsl:call-template name="commandSection">
-            <xsl:with-param name="COMMAND" select="$CURRCOMMAND" />
-            <xsl:with-param name="indent" select="0" />
-          </xsl:call-template>          
-        </xsl:when>
-        <xsl:when test="$selected_class='zone'">
-          Commands with assets in <xsl:value-of select="$CURRZONE/@name"/>
-          <xsl:for-each select="/data/commands/command[(@command_id = key('assets_by_zone_id', $CURRZONE/@zone_id)/@command_id)]">
-            <xsl:comment> or (@command_id = key('command_by_id', key('assets_by_zone_id', $CURRZONE/@zone_id)/@command_id)/@parent_command_id)</xsl:comment>
-            <xsl:call-template name="commandSection">
-              <xsl:with-param name="COMMAND" select="." />
-              <xsl:with-param name="indent" select="0" />
-            </xsl:call-template>
-          </xsl:for-each>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:call-template name="commandSection">
-            <xsl:with-param name="COMMAND" select="key('command_by_id', /data/@user_command_id)" />
-            <xsl:with-param name="indent" select="0" />
-          </xsl:call-template>
-        </xsl:otherwise>
-      </xsl:choose>
-    </div>
     
     <div class="assetList" style="float:left;width:500px;height:900px;overflow-y:scroll;">
       <xsl:choose>
@@ -370,5 +342,95 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt">
         <xsl:call-template name="recursedZones" />
       </xsl:for-each>
     </div>
+  </xsl:template>
+
+  <xsl:template name="mainMap">
+    <div id="divMap" isLeft="500" class="mapArea">
+      <div id="divMapActual" style="width:{$CURRMAP/@width}px;height:{$CURRMAP/@height}px;background:url('images/maps/{$CURRMAP/@background}');border:1px solid gray;">
+        <xsl:if test="not($CURRZONE)">No zone is selected</xsl:if>
+        <xsl:if test="not($CURRMAP)">No map</xsl:if>
+        <xsl:for-each select="/data/zones/zone[@map_id=$CURRMAP/@map_id]">
+          <xsl:variable name="ZONE" select="." />
+          <xsl:variable name="ZONE_TYPE" select="key('zone_type_by_id', $ZONE/@zone_type_id)" />
+          <xsl:choose>
+            <xsl:when test="$ZONE_TYPE/@name='Battlefield'">
+              <div onclick="game.selectItem('zone', {$ZONE/@zone_id});" class="mapZone" style="left:{@x}px;top:{@y}px;width:{@width}px;height:{@height}px;">
+                <xsl:value-of select="$ZONE/@name"/>
+              </div>
+            </xsl:when>
+            <xsl:otherwise>
+              <div onclick="game.selectItem('zone', {@zone_id});" class="zone" style="cursor:hand;position:absolute;left:{@x - 12}px;top:{@y - 12}px;">
+                <xsl:if test="$ZONE_TYPE/@icon">
+                  <img src="images/zones/{$ZONE_TYPE/@icon}" style="height:24px;width:24px;float:left;"/>
+                </xsl:if>
+                <div style="margin-left:24px;background: rgba(255, 255, 255, 0.6);border:1px solid gray;">
+                  <div style="opacity:1.0;white-space:nowrap;color:black;">
+                    <xsl:value-of select="@name"/>
+                  </div>
+                </div>
+              </div>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:for-each>
+      </div>
+      <xsl:if test="not(/data[@hide_assets=1])">
+        <xsl:call-template name="mapAssets">
+          <xsl:with-param name="ZONE" select="." />
+          <xsl:with-param name="MAP" select="$CURRMAP" />
+        </xsl:call-template>
+      </xsl:if>
+      <xsl:if test="not(/data[@hide_messages=1])">
+        <xsl:call-template name="mapMessages">
+          <xsl:with-param name="ZONE" select="." />
+          <xsl:with-param name="MAP" select="$CURRMAP" />
+        </xsl:call-template>
+      </xsl:if>
+    </div>    
+  </xsl:template>
+
+  <xsl:template name="mapAssets">
+    <xsl:param name="MAP"></xsl:param>
+    <xsl:for-each select="/data/asset_types/asset_type">
+      <xsl:variable name="ASSET_TYPE" select="." />
+      <xsl:for-each select="key('assets_by_type_id', @asset_type_id)[@x and @y and (@visibility &lt;= $MAP/@scale)]">
+
+        <xsl:variable name="ASSET" select="." />
+        <xsl:comment>
+          <div style="position:absolute;left:{($ASSET/@x - $MAP/@left) * $MAP/@scale}px;top:{($ASSET/@y - $MAP/@top) * $MAP/@scale }px;height:16px;width:16px;border:1px solid white;">&#160;</div>
+        </xsl:comment>
+        <div onclick="game.selectItem('asset', {$ASSET/@asset_id});" style="cursor:pointer;float:left;position:absolute;left:{($ASSET/@x - $MAP/@x) * $MAP/@scale - 8}px;top:{($ASSET/@y - $MAP/@y) * $MAP/@scale - 8}px;">
+          <img src="images/assets/{$ASSET/@asset_type_id}_16.png"/>
+          <div style="margin-left:18px;margin-top:-12px;background: rgba(255, 255, 255, 0.6);border:1px solid gray;">
+            <div style="opacity:1.0;white-space:nowrap;color:black;">
+              <xsl:choose>
+                <xsl:when test="$ASSET/@name">
+                  <xsl:value-of select="$ASSET/@name"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="$ASSET_TYPE/@name"/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </div>
+          </div>
+        </div>
+      </xsl:for-each>
+
+    </xsl:for-each>
+  </xsl:template>
+
+  <xsl:template name="mapMessages">
+    <xsl:param name="MAP"></xsl:param>
+    <xsl:for-each select="/data/messages/message[@x &gt;= $MAP/@x and @x &lt;= ($MAP/@x + $MAP/@width) and @y &gt;= $MAP/@y and @y &lt;= ($MAP/@y + $MAP/@height) ]">
+      <xsl:variable name="MESSAGE" select="." />
+      <div class="message onmap" onclick="game.selectItem('message', {@message_id});" style="cursor:pointer;float:left;position:absolute;left:{($MESSAGE/@x - $MAP/@x) * $MAP/@scale - 8}px;top:{($MESSAGE/@y - $MAP/@y) * $MAP/@scale - 8}px;width:150px;">
+        <xsl:value-of select="@content"/>
+        <xsl:comment>
+          <div class="debug">
+            X:<xsl:value-of select="$MESSAGE/@x"/> Y:<xsl:value-of select="$MESSAGE/@y"/>
+            left: <xsl:value-of select="($MESSAGE/@x - $MAP/@x) * $MAP/@scale - 8"  /> top: <xsl:value-of select="($MESSAGE/@y - $MAP/@y) * $MAP/@scale - 8"/>
+          </div>
+        </xsl:comment>
+      </div>
+    </xsl:for-each>
   </xsl:template>
 </xsl:stylesheet>
