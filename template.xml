@@ -1,0 +1,81 @@
+<data curr_section="5" turn="1">
+    <header>
+    </header>
+    <events>
+    </events>
+    <options>
+    </options>
+    <links>
+    </links>
+    <zones>
+        <zone id="-1" />
+    </zones>
+    <we />
+    <zas>
+        <za zone_id="3" asset_id="1"/>
+        <za zone_id="3" asset_id="2"/>
+        <za zone_id="9" asset_id="3"/>
+        <za zone_id="9" asset_id="4"/>
+        <za zone_id="11" asset_id="5"/>
+        <za zone_id="11" asset_id="6"/>
+        <za zone_id="11" asset_id="7"/>
+        <za zone_id="11" asset_id="8"/>
+        <za zone_id="11" asset_id="9"/>
+        <za zone_id="11" asset_id="11"/>
+        <za zone_id="11" asset_id="12"/>
+        <za zone_id="11" asset_id="13"/>
+        <za zone_id="11" asset_id="14"/>
+        <za zone_id="11" asset_id="15"/>
+        <za zone_id="3" asset_id="16"/>
+        <za zone_id="9" asset_id="17"/>
+        <za zone_id="11" asset_id="18"/>
+        <za zone_id="2" asset_id="19"/>
+    </zas>
+    <zone_measures>
+        <zone_measure id="1" name="Production"/>
+    </zone_measures>
+    <factions>
+        <faction id="1" name="US" control="1" vis="1" icon="us.gif"/>
+        <faction id="2" name="NLF" control="0" vis="0" icon="nlf.gif"/>
+        <faction id="3" name="SVN" control="0" vis="1" icon="svn.gif"/>
+    </factions>
+    <assets>
+        <asset id="1" name="1/5" type="Mechanised Battalion" skill="5" faction_id="1" size="15"/>
+        <asset id="2" name="4/9 Manchu" type="Infantry Battalion" skill="5" faction_id="1" size="10"/>
+        <asset id="3" name="2/12" type="Infantry Battalion" skill="5" faction_id="1" size="10"/>
+        <asset id="4" name="2/14 Golden Dragons" type="Infantry Battalion" skill="5" faction_id="1" size="10"/>
+        <asset id="5" name="2/22" type="Infantry Battalion" skill="5" faction_id="1" size="10" />
+        <asset id="6" name="3/22" type="Mechanised Battalion" skill="5" faction_id="1" size="20" />
+        <asset id="7" name="4/23 Tomahawks" type="Mechanised Battalion" skill="5" faction_id="1" size="20"/>
+        <asset id="8" name="1/27 Wolfhounds" type="Infantry Battalion" skill="5" faction_id="1" size="10"/>
+        <asset id="9" name="2/27 Wolfhounds" type="Infantry Battalion" skill="5" faction_id="1" size="10"/>
+        <asset id="11" name="2/34" type="Armoured Battalion" skill="5" faction_id="1" size="20"/>
+        <asset id="12" name="3/4" type="Cavalry Squadron" skill="5" faction_id="1" size="10"/>
+        <asset id="13" name="F/50th Inf" type="Long Range Patrol" skill="7" faction_id="1" size="5"/>
+        <asset id="14" name="25th" type="Aviation Battalion" skill="5" faction_id="1" size="20"/>
+        <asset id="15" name="25th HQ" type="Base camp" faction_id="1" capacity="150"/>
+        <asset id="16" name="Tay Ninh" type="Base camp" faction_id="1" capacity="30"/>
+        <asset id="17" name="Dau Tieng" type="Base camp" faction_id="1" capacity="30"/>
+        <asset id="18" name="1/1 ARVN" type="Infantry Battalion" faction_id="3" />
+        <asset id="19" name="1/1 VC" type="Infantry Battalion" faction_id="2" />
+    </assets>
+    <missions>
+        <mission id="1" name="Squad Sweep" coc="0.1" skill="2" cost="1"/>
+        <mission id="2" name="Squad Night Ambush" coc="0.2" skill="4" cost="2"/>
+        <mission id="3" name="Platoon Sweep" skill="2" cost="3" />
+        <mission id="4" name="Platoon Night Ambush" skill="2" cost="5"/>
+        <mission id="5" name="Company Sweep" skill="2" cost="10"/>
+        <mission id="6" name="Battalion Sweep" skill="2" cost="40"/>
+        <mission id="7" name="Sniper" cost="2"/>
+        <mission id="8" name="Squad Recon" cost="1"/>
+        <mission id="9" name="FSB Defense" />
+        <mission id="10" name="HQ Defense" />
+        <mission id="11" name="Convoy Protection" />
+        <mission id="12" name="Relocate" />
+    </missions>
+    <orders>
+        <order asset_id="9" mission_id="12"  zone_id="3" type="Relocate"/>
+        <order asset_id="11" mission_id="2" zone_id="8" quantity="10"/>
+    </orders>
+    <map show_zones="1" show_assets="1" scaling="1"></map>
+</data>

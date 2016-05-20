@@ -1,0 +1,386 @@
+body, td 
+{
+    font-family:Tahoma, Arial;
+    font-size:10pt;
+}
+
+.assetBox
+{
+    border:1px solid gray;
+    height:50px;
+    margin-bottom:1px;
+}
+.assetBoxTitle
+{
+    font-weight:bold;
+    font-size:12px;
+}
+.assetIcon 
+{
+    width:48px;
+    height:48px;
+    cursor:pointer;
+}
+.assetList {
+    border:1px solid gray;
+}
+
+.assetList .asset {
+    padding-left:8px;
+}
+.assetList .command {
+    padding-left:8px;
+    background:#aaaaaa;
+}
+.asset.battalion {
+    font-weight:bold;
+    font-size:16px;
+    margin-top:5px;
+    border-top:2px solid #aaaaaa;
+}
+.asset.company {
+    font-weight:bold;
+    font-size:14px;
+    margin-top:5px;
+    border-top:2px solid #aaaaaa;
+}
+.asset.platoon {
+    font-weight:bold;
+    font-size:12px;
+    margin-top:5px;
+    border-top:1px solid #dddddd;
+}
+
+.commandList .command {
+    background:#eeeeee;
+    height:96px;
+    border:1px solid gray;
+    padding:8x;
+    margin:2px;
+}
+.commandList .command.selected {
+    background:black;
+    color:white;
+}
+
+.attributeIcon
+{
+    height:16px;
+    width:16px;
+    cursor:hand;
+    vertical-align:middle;
+    float:left;
+}
+.attributeBox
+{
+    background:#eeeeee;
+    height:16px;
+    float:left;
+    margin-right:3px;
+}
+.background {
+    background: #eeeeee;
+}
+.quantity 
+{
+    color:White;
+    background:gray;
+}
+.tab 
+{
+    float:left;
+    border-top:1px solid gray;
+    border-left:1px solid gray;
+    border-right:1px solid gray;
+    padding-left:16px;
+    padding-right:16px;
+    font-weight:bold;
+    font-family:Arial;
+    font-size:12pt;
+    height:48px;
+    background:#dddddd;
+    color:#888888;
+}
+.tab.selected
+{
+    color:black;
+    background:white;
+}
+.button 
+{
+    border:2px solid gray;
+    padding:3px;
+    background:#eeeeee;
+    border-radius:8px;
+}
+.detailTitle{
+    font-size:16pt;
+    font-weight:bold;
+}
+.detailType
+{
+    font-size:36pt;
+    color:#dddddd;
+    float:right;
+    margin-right:10px;
+    font-weight:normal;
+}
+.subHeading
+{
+    background:#666666;
+    color:White;
+    padding-left:4px;
+    padding:2px;
+    margin-bottom:1px;
+    font-size:16px;
+}
+.debug
+{
+    color:Gray;
+}
+.event 
+{
+    font-size:11pt;
+    padding:6px;    
+    border:1px solid gray;
+}
+.event.t1
+{
+    background:#eeeeee;
+}
+.event.t3
+{
+}
+.eventdesc
+{
+    font-size:10pt;
+}
+.eventbutton
+{
+    float:left;
+}
+.option 
+{
+    font-size:8pt;
+    padding-left:16px;
+    line-height:16px;
+}
+.order 
+{
+    border:1px solid gray;
+}
+.zone
+{
+}
+.turn
+{
+    background:gray;
+    font-weight:bold;
+}
+
+.detailTable TH
+{
+    color:White;
+    background:#333333;
+    font-size:9px;
+    font-weight:normal;
+}
+.main
+{
+    background:white;
+    position:absolute;
+    top:106px;
+    width:950px;
+    height:1200px;
+    border:2px solid gray;
+}
+.mainbutton 
+{
+    width:80px;
+    height:80px;
+    border:0px; 
+    margin:5px;
+    background:#dddddd;
+    float:left;
+    padding:10px;
+    font-size:14px;
+    font-weight:bold;
+    color:#666666;
+    cursor:pointer;
+}
+.mainbutton.selected 
+{
+    background:white;
+    border:2px solid #888888;
+    border-bottom:0px;
+    height:81px;
+}
+.mainFrame
+{
+    width:850px;
+    height:640px;
+    overflow:scroll;
+    border:2px solid gray;
+}
+.secondButtonBar
+{
+    background:#eeeeee;
+}
+.secondButton
+{
+    width:120px;
+    height:60px;
+    border-top:2px solid #888888; 
+    border-bottom:2px solid #888888; 
+    border-left-color:White;
+    border-top-color:White;
+    background:url('images/controls/hz_arrow.png');
+    float:left;
+    padding:5px;
+    font-size:12px;
+    font-weight:bold;
+    color:black;
+    cursor:pointer;
+}
+.secondButton.selected 
+{
+    background:white;
+    border-bottom:0px;
+}
+.secondButton.breadcrumb
+{
+    background:#bbbbbb;
+    
+}
+.secondTab 
+{
+    width:100px;
+    height:35px;    
+    background:#dddddd;
+    border:0px solid gray;
+    float:left;
+    padding:5px;
+    padding-left:15px;
+    padding-top:20px;
+    font-size:12px;
+    font-weight:bold;
+    color:#666666;
+    cursor:pointer;
+    background:url('images/controls/hz_tab.png');
+}
+
+.secondTab.selected
+{
+    background:url('images/controls/hz_tab_selected.png');
+}
+
+.popupBackground 
+{
+    background:black;
+    opacity:0.3;
+    width:960px;
+    height:640px;
+}
+
+.popupBox 
+{
+    background:#eeeeee;
+    border:2px solid gray;
+    position:absolute;
+    top:110px;
+    left:20px;
+    width:900px;
+    height:500px;
+    opacity:1;
+    overflow:hidden;
+}
+
+.popupBox.div2
+{
+    top:110px;
+    left:200px;
+    width:600px;
+    height:500px;
+}
+
+.barBackground 
+{
+    background:white;
+    border:1px solid gray;
+}
+.ilg.close 
+{
+    width:94px;
+    height:94px;
+    background:URL('images/controls/close.png');
+    cursor:pointer;
+}
+
+.ism.close
+{
+    width:32px;
+    height:32px;
+    background:URL('images/controls/close_32.png');
+    cursor:pointer;
+}
+.sectionBar
+{
+    position:absolute;top:0px;left:175px;
+}
+.message {
+    border:1px solid black;
+    margin:10px;
+    width:80%;
+    padding:5px;
+}
+.messagefrom {
+    border-bottom:1px dotted gray;
+    font-style:italic;
+}
+.message.onmap {
+    border-radius:15px;
+    background:white;
+    border:1px solid gray;
+    width:300px;
+    opacity:0.6;
+}
+.mainArea {
+    position:absolute;
+    top:75px;
+    left:175px;
+}
+.mapZone {
+    border:1px solid red;
+    position:absolute;
+    color:white;
+    padding:3px;
+}
+
+.navigationStrip {
+    width:175px;
+    background:#aaaaaa;
+    height:900px;
+}
+.zoneBreadcrumbs {
+    position:relative;
+    float:left;
+}
+.zoneOptions {
+    position:relative;
+    height:50px;
+    float:right;
+    margin-top:5px;
+    margin-right:5px;
+}
+.zoneOption {
+    width:48px;
+    height:48px;
+    border:1px solid gray;
+    float:left;
+    cursor:pointer;
+    background:#eeeeee;
+    margin-left:5px;
+}
+    .zoneOption.selected {
+        background:#333333;
+    }

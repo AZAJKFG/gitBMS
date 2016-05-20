@@ -1,0 +1,47 @@
+<html>
+<head>
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <link REL="stylesheet" TYPE="text/css" HREF="coins.css">
+    <script language="javascript" src="basic.js"></script>
+    <script language="javascript" src="coins.js"></script>
+    <script language="javascript" src="serverside.js"></script>
+    <script language="javascript">
+        var xslMain = loadXMLDoc("main.xsl")
+        var xmlMain = loadXMLDoc("data.xml")
+        var xmlTemp = loadXMLDoc("temp.xml")
+        var xmlGame = loadXMLDoc("data_game.php")
+        var xmlStatic = loadXMLDoc("data_static.php")
+
+      //  alert(xmlStatic.firstChild.element.xml); can't seem to output whole of xml
+
+        function init() {
+            start();
+            copyAllChildren(xmlStatic, xmlMain);
+            copyAllChildren(xmlGame, xmlMain);
+
+            //xmlMain.firstChild.appendChild(xmlRules.firstChild);
+            //xmlMain.firstChild.appendChild(xmlGame.firstChild);
+            renderPage();
+        }
+
+        function renderPage() {
+            rememberElementPosition('divMap');
+            displayResult(xmlMain, xslMain, "divMain");
+            reinstateElementPosition('divMap');
+//            $("#slider").slider();
+        }
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#slider").slider();
+        });
+    </script>
+</head>
+<body onload="init();" style="margin:0 0 0 0;">
+<div id="divMain">
+</div>
+</body>
+</html>

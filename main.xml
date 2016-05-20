@@ -1,0 +1,31 @@
+<data curr_section="1" selected_tab="1">
+    <header>
+        <section id="1" name="NEWS">          
+        </section>
+        <section id="2" name="MILITARY">
+        </section>
+        <section id="4" name="POLITICAL">
+        </section>
+        <section id="3" name="REGIME">
+        </section>
+    </header>
+    <events>
+        <event id="1" name="Physical Security" section="2" />
+        <event id="2" name="Guerilla Sabotage" priority="5" />
+        <event id="3" name="Embassy bombed" section="1" priority="5" description="A car packed with explosives was left outside the embassy." />
+        <event id="4" name="Harassment and Interdiction Fire" priority="3" />
+        <event id="5" name="Oppression" section="3" />
+        <event id="6" name="Security Apparatus" section="3" />
+        <event id="7" name="Nepotism" section="3" />
+        <event id="8" name="Corruption" section="3" />
+        <event id="9" name="Popularity" section="3" />
+        <event id="8" name="Legitimacy" section="3" />
+        <event id="10" name="Press Coverage" section="4" />
+        <event id="11" name="Domestic Popularity" section="4" />
+        <event id="12" name="Effectiveness" section="2" />
+    </events>
+    <options>
+        <option event="3">Secure embassy and surrounding streets</option>
+        <option event="3">Relocate embassy to military base</option>
+    </options>
+</data>

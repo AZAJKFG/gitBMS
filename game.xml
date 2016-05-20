@@ -1,0 +1,99 @@
+<game>
+<header>
+    <section id="5" name="Map"/>
+    <section id="6" name="Assets"/>
+    <section id="7" name="Events"/>
+    <section id="8" name="History"/>
+</header>
+<options>
+</options>
+
+<zones>
+    <zone id="-1"/>
+    <zone id="1" name="Saigon" x="427" y="742" type="Urban" production="300" population="3000000" pie="173"/>
+    <zone id="3" name="Tay Ninh City" x="155" y="497" type="Urban" revenue="3" production="10" population="100000"/>
+    <zone id="9" name="Dau Tieng" x="343" y="491" type="Urban" production="5" population="50000"/>
+    <zone id="11" name="Cu Chi" x="383" y="645" type="Urban" production="4" population="40000"/>
+    <zone id="2" name="Ho Bo Woods" x="354" y="587" type="Forest"/>
+    <zone id="8" name="Boi Loi Woods" x="404" y="614" type="Forest"/>
+    <zone id="5" name="Filhol Plantation" x="441" y="647" production="1" type="Plantation"/>
+    <zone id="6" name="Ben Cui Plantation" x="150" y="451" production="1" type="Plantation"/>
+    <zone id="10" name="Michelin Plantation" x="423" y="515" production="2" type="Plantation"/>
+    <zone id="4" name="Nui Ba Den" x="153" y="431" type="Mountain"/>
+    <zone id="7" name="Highway 22" x="235" y="547" type="Road"/>
+    <zone id="12" name="Plain of Reeds" x="238" y="683" type="Marsh"/>
+    <zone id="13" name="Hau Nghia" x="310" y="663" production="10" population="100000" type="Rural"/>
+    <zone id="14" name="Binh Duong" x="402" y="560" production="10" population="100000" type="Rural"/>
+</zones>
+
+<we/>
+<zas>
+    <za zone_id="3" asset_id="1"/>
+    <za zone_id="3" asset_id="2"/>
+    <za zone_id="9" asset_id="3"/>
+    <za zone_id="9" asset_id="4"/>
+    <za zone_id="11" asset_id="5"/>
+    <za zone_id="11" asset_id="6"/>
+    <za zone_id="11" asset_id="7"/>
+    <za zone_id="11" asset_id="8"/>
+    <za zone_id="11" asset_id="9"/>
+    <za zone_id="11" asset_id="11"/>
+    <za zone_id="11" asset_id="12"/>
+    <za zone_id="11" asset_id="13"/>
+    <za zone_id="11" asset_id="14"/>
+    <za zone_id="11" asset_id="15"/>
+    <za zone_id="3" asset_id="16"/>
+    <za zone_id="9" asset_id="17"/>
+    <za zone_id="11" asset_id="18"/>
+    <za zone_id="2" asset_id="19"/>
+    <za zone_id="11" asset_id="20"/>
+    <za zone_id="3" asset_id="21"/>
+</zas>
+<zone_measures>
+    <zone_measure id="1" name="Production"/>
+</zone_measures>
+<factions>
+    <faction id="1" name="US" control="1" vis="1" icon="us.gif">
+        <other_faction id="2" relation="-1" />
+        <other_faction id="3" relation="0.5" />
+    </faction>
+    <faction id="2" name="NLF" control="0" vis="0" icon="nlf.gif">
+        <other_faction id="2" relation="-1" />
+        <other_faction id="3" relation="-1" />
+    </faction>
+    <faction id="3" name="SVN" control="0" vis="1" icon="svn.gif">
+        <other_faction id="1" relation="0.5" />
+        <other_faction id="2" relation="-1" />
+    </faction>
+    <faction id="4" name="Cao Dai" control="0" vis="0" icon="cao.png"/>
+</factions>
+<assets>
+    <asset id="1" class="Unit" name="1/5" type="Mechanised Battalion" skill="5" faction_id="1" size="15"/>
+    <asset id="2" class="Unit" name="4/9 Manchu" type="Infantry Battalion" skill="5" faction_id="1" size="10">
+        <order quantity="4" event_id="36"/>
+    </asset>
+    <asset id="3" class="Unit" name="2/12" type="Infantry Battalion" skill="5" faction_id="1" size="10"/>
+    <asset id="4" class="Unit" name="2/14 Golden Dragons" type="Infantry Battalion" skill="5" faction_id="1" size="10"/>
+    <asset id="5" class="Unit" name="2/22" type="Infantry Battalion" skill="5" faction_id="1" size="10"/>
+    <asset id="6" class="Unit" name="3/22" type="Mechanised Battalion" skill="5" faction_id="1" size="20"/>
+    <asset id="7" class="Unit" name="4/23 Tomahawks" type="Mechanised Battalion" skill="5" faction_id="1" size="20"/>
+    <asset id="8" class="Unit" name="1/27 Wolfhounds" type="Infantry Battalion" skill="6" faction_id="1" size="10"/>
+    <asset id="9" class="Unit" name="2/27 Wolfhounds" type="Infantry Battalion" skill="6" faction_id="1" size="10"/>
+    <asset id="11" class="Unit" name="2/34" type="Armoured Battalion" skill="5" faction_id="1" size="20"/>
+    <asset id="12" class="Unit" name="3/4" type="Cavalry Squadron" skill="5" faction_id="1" size="10"/>
+    <asset id="13" class="Unit" name="F/50th Inf" type="Long Range Patrol" skill="7" faction_id="1" size="5"/>
+    <asset id="14" class="Unit" name="25th" type="Aviation Battalion" skill="5" faction_id="1" size="20"/>
+    <asset id="15" class="Base" name="25th HQ" type="Base camp" faction_id="1" capacity="150" defense="7"/>
+    <asset id="16" class="Base" name="Tay Ninh" type="Base camp" faction_id="1" capacity="30" defense="7"/>
+    <asset id="17" class="Base" name="Dau Tieng" type="Base camp" faction_id="1" capacity="30" defense="5"/>
+    <asset id="18" class="Unit" name="1/1 ARVN" type="Infantry Battalion" faction_id="3"/>
+    <asset id="19" class="Unit" name="1/1 VC" type="Infantry Battalion" faction_id="2"/>
+    <asset id="20" class="Unit" name="1/2 VC" type="Infantry Battalion" faction_id="2"/>
+    <asset id="21" class="Unit" name="Cao Dai Militia" type="Infantry Battalion" faction_id="4"/>
+</assets>
+
+<map show_zones="1" show_assets="1" scaling="1"></map>
+<history>
+    <h description="Start" />
+</history>
+</game>

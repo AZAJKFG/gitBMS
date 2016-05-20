@@ -1,0 +1,54 @@
+<html>
+<head>
+    <link REL="stylesheet" TYPE="text/css" HREF="bms.css">
+    <script language="javascript" src="basic.js"></script>
+    <script language="javascript" src="bms.js"></script>
+    <script language="javascript" src="bms2.js"></script>
+    <script language="javascript">
+        var xslMain = loadXMLDoc("main.xsl");
+        var xslMap = loadXMLDoc("map.xsl");
+        var xslDetail = loadXMLDoc("detail.xsl");
+        var xslSetup = loadXMLDoc("setup.xsl");
+        var xslRecurse = loadXMLDoc("recurse.xsl");
+
+        var xmlMain = loadXMLDoc("data.xml");
+        var xmlTemp = loadXMLDoc("temp.xml");
+        //local copies
+        var xmlGame = loadXMLDoc("local_data_game.xml");
+        var xmlStatic = loadXMLDoc("local_data_static.xml");
+      //  alert(xmlStatic.firstChild.element.xml); can't seem to output whole of xml
+
+        function initPage() {
+            game.init();
+        }
+
+        function renderPage() {
+            rememberElementPosition('divMap');
+            displayResult(xmlMain, xslMain, "divMain");
+            reinstateElementPosition('divMap');
+        }
+    </script>
+</head>
+<body onload="initPage();" style="margin:0 0 0 0;" class="background">
+<div class="main" id="divMainT1">1</div>
+<div class="main" id="divMainT2">2</div>
+<div class="main" id="divMainT3">3</div>
+<div class="main" id="divMainT4">4</div>
+<div class="main" id="divMainT5">5</div>
+<div class="main" id="divMainT6">6</div>
+<div class="main" id="divMainT7">Loading</div>
+
+<div id="divDetail" style="position:absolute;top:0px;left:0px;display:none;">
+</div>
+<div id="divDetail2" style="position:absolute;top:0px;left:0px;display:none;">
+</div>
+<div id="divPopup" style="position:absolute;top:0px;left:0px;display:none;">
+</div>
+<div id="divTopBar" class="sectionBar">
+    <div class="mainbutton selected" onclick="game.sections.select('T1');" id="mainbutton1" >MAP</div>
+    <div class="mainbutton" onclick="game.sections.select('T2');" id="mainbutton2" >MESSAGES</div>
+    <div class="mainbutton" onclick="game.sections.select('T3');" id="mainbutton3" >FORCES</div>
+    <div class="mainbutton debug" onclick="game.sections.select('T7');" id="mainbutton7" >DEBUG</div>
+</div>
+</body>
+</html>

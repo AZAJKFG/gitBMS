@@ -1,0 +1,268 @@
+<data test="1" updated="08 May 16">
+	<assets>
+<asset asset_id="1" asset_type_id="8" zone_id="2" parent_asset_id="0" command_id="3" visibility="2" order_seq="20"/>
+<asset asset_id="2" asset_type_id="9" parent_asset_id="1" visibility="5" order_seq="22"/>
+<asset asset_id="3" asset_type_id="10" parent_asset_id="1" visibility="5"/>
+<asset asset_id="4" asset_type_id="7" parent_asset_id="1" visibility="5" order_seq="30"/>
+<asset asset_id="5" asset_type_id="7" parent_asset_id="1" visibility="5" order_seq="30"/>
+<asset asset_id="6" asset_type_id="7" parent_asset_id="1" visibility="5" order_seq="30"/>
+<asset asset_id="7" asset_type_id="13" zone_id="8" parent_asset_id="0" command_id="3" x="250" y="210" visibility="1" order_seq="10"/>
+<asset asset_id="8" name="CC +1" asset_type_id="12" parent_asset_id="7" visibility="5" order_seq="12"/>
+<asset asset_id="9" asset_type_id="8" parent_asset_id="7" visibility="2" order_seq="20"/>
+<asset asset_id="10" asset_type_id="8" parent_asset_id="7" visibility="2" order_seq="20"/>
+<asset asset_id="11" asset_type_id="8" parent_asset_id="7" visibility="2" order_seq="20"/>
+<asset asset_id="12" asset_type_id="10" zone_id="8" parent_asset_id="0" command_id="3" visibility="5"/>
+<asset asset_id="13" asset_type_id="10" zone_id="8" parent_asset_id="0" command_id="3" visibility="5"/>
+<asset asset_id="14" asset_type_id="7" parent_asset_id="9" visibility="5" order_seq="30"/>
+<asset asset_id="15" asset_type_id="7" parent_asset_id="9" visibility="5" order_seq="30"/>
+<asset asset_id="16" asset_type_id="7" parent_asset_id="9" visibility="5" order_seq="30"/>
+<asset asset_id="17" asset_type_id="7" parent_asset_id="10" visibility="5" order_seq="30"/>
+<asset asset_id="18" asset_type_id="7" parent_asset_id="10" visibility="5" order_seq="30"/>
+<asset asset_id="19" asset_type_id="7" parent_asset_id="10" visibility="5" order_seq="30"/>
+<asset asset_id="20" asset_type_id="7" parent_asset_id="11" visibility="5" order_seq="30"/>
+<asset asset_id="21" asset_type_id="7" parent_asset_id="11" visibility="5" order_seq="30"/>
+<asset asset_id="22" asset_type_id="7" parent_asset_id="11" visibility="5" order_seq="30"/>
+<asset asset_id="23" name="North Bridge" asset_type_id="1" x="498" y="196" visibility="1"/>
+<asset asset_id="24" name="Railway Bridge" asset_type_id="1" x="244" y="400" visibility="1"/>
+<asset asset_id="25" asset_type_id="3" x="634" y="228" visibility="1"/>
+<asset asset_id="26" asset_type_id="2" zone_id="1" command_id="14" x="400" y="140" visibility="1"/>
+<asset asset_id="27" name="South Bridge" asset_type_id="1" x="315" y="476" visibility="1"/>
+<asset asset_id="28" name="Centre Bridge" asset_type_id="1" x="466" y="297" visibility="1"/>
+<asset asset_id="29" asset_type_id="2" zone_id="4" command_id="14" x="486" y="317" visibility="1"/>
+<asset asset_id="30" name="1st FallschirmJager" asset_type_id="13" zone_id="4" command_id="4" x="500" y="310" visibility="1" order_seq="10"/>
+<asset asset_id="31" asset_type_id="11" zone_id="4" command_id="4" visibility="5"/>
+<asset asset_id="32" asset_type_id="6" zone_id="4" command_id="4" visibility="5"/>
+<asset asset_id="33" name="1st FsJg Platoon" asset_type_id="8" parent_asset_id="30" morale_id="3" visibility="2" order_seq="20"/>
+<asset asset_id="34" name="2nd FsJg Platoon" asset_type_id="8" parent_asset_id="30" morale_id="3" visibility="2" order_seq="20"/>
+<asset asset_id="35" asset_type_id="10" parent_asset_id="30" morale_id="3" visibility="5"/>
+<asset asset_id="36" asset_type_id="13" zone_id="8" parent_asset_id="0" command_id="5" visibility="1" order_seq="10"/>
+<asset asset_id="37" asset_type_id="8" parent_asset_id="36" y="0" visibility="2" order_seq="20"/>
+<asset asset_id="38" asset_type_id="8" parent_asset_id="36" visibility="2" order_seq="20"/>
+<asset asset_id="39" asset_type_id="8" parent_asset_id="36" visibility="2" order_seq="20"/>
+<asset asset_id="40" asset_type_id="7" parent_asset_id="37" visibility="5" order_seq="30"/>
+<asset asset_id="41" asset_type_id="7" parent_asset_id="37" visibility="5" order_seq="30"/>
+<asset asset_id="42" asset_type_id="7" parent_asset_id="37" visibility="5" order_seq="30"/>
+<asset asset_id="43" asset_type_id="9" parent_asset_id="37" y="0" visibility="5" order_seq="22"/>
+<asset asset_id="44" name="(+2)" asset_type_id="12" parent_asset_id="30" morale_id="3" visibility="5" order_seq="12"/>
+<asset asset_id="45" asset_type_id="10" parent_asset_id="30" morale_id="3" visibility="5"/>
+<asset asset_id="46" name="3rd FsJg Platoon" asset_type_id="8" parent_asset_id="30" morale_id="3" visibility="2" order_seq="20"/>
+<asset asset_id="47" name="(+2) PC" asset_type_id="9" parent_asset_id="33" morale_id="3" visibility="5" order_seq="22"/>
+<asset asset_id="48" asset_type_id="7" parent_asset_id="33" morale_id="3" visibility="5" order_seq="30"/>
+<asset asset_id="49" asset_type_id="7" parent_asset_id="33" morale_id="3" visibility="5" order_seq="30"/>
+<asset asset_id="50" asset_type_id="7" parent_asset_id="33" morale_id="3" visibility="5" order_seq="30"/>
+<asset asset_id="51" name="+1 PC" asset_type_id="9" parent_asset_id="34" morale_id="3" visibility="5" order_seq="22"/>
+<asset asset_id="52" asset_type_id="7" parent_asset_id="34" morale_id="3" visibility="5" order_seq="30"/>
+<asset asset_id="53" asset_type_id="7" parent_asset_id="34" morale_id="3" visibility="5" order_seq="30"/>
+<asset asset_id="54" asset_type_id="7" parent_asset_id="34" y="0" morale_id="3" visibility="5" order_seq="30"/>
+<asset asset_id="55" name="+1 PC" asset_type_id="9" parent_asset_id="46" morale_id="3" visibility="5" order_seq="22"/>
+<asset asset_id="56" asset_type_id="7" parent_asset_id="46" morale_id="3" visibility="5" order_seq="30"/>
+<asset asset_id="57" asset_type_id="7" parent_asset_id="46" morale_id="3" visibility="5" order_seq="30"/>
+<asset asset_id="58" asset_type_id="7" parent_asset_id="46" morale_id="3" visibility="5" order_seq="30"/>
+<asset asset_id="59" name="1/4th A" asset_type_id="13" zone_id="3" command_id="6" morale_id="2" visibility="1" order_seq="10"/>
+<asset asset_id="60" name="+2 CC" asset_type_id="12" parent_asset_id="59" morale_id="2" visibility="5" order_seq="12"/>
+<asset asset_id="61" asset_type_id="10" parent_asset_id="59" morale_id="2" visibility="5"/>
+<asset asset_id="62" asset_type_id="23" parent_asset_id="59" morale_id="2" visibility="5"/>
+<asset asset_id="63" asset_type_id="24" parent_asset_id="59" morale_id="2" visibility="5"/>
+<asset asset_id="64" name="1st Platoon" asset_type_id="8" parent_asset_id="59" morale_id="2" visibility="2" order_seq="20"/>
+<asset asset_id="65" name="2nd Platoon" asset_type_id="8" parent_asset_id="59" morale_id="2" visibility="2" order_seq="20"/>
+<asset asset_id="66" name="3rd Platoon" asset_type_id="8" parent_asset_id="59" morale_id="1" visibility="2" order_seq="20"/>
+<asset asset_id="67" name="+2 PC" asset_type_id="9" parent_asset_id="64" morale_id="2" visibility="5" order_seq="22"/>
+<asset asset_id="68" asset_type_id="7" parent_asset_id="64" morale_id="2" visibility="5" order_seq="30"/>
+<asset asset_id="69" asset_type_id="7" parent_asset_id="64" morale_id="2" visibility="5" order_seq="30"/>
+<asset asset_id="70" asset_type_id="7" parent_asset_id="64" morale_id="2" visibility="5" order_seq="30"/>
+<asset asset_id="71" name="+1 PC" asset_type_id="9" parent_asset_id="65" morale_id="2" visibility="5" order_seq="22"/>
+<asset asset_id="72" asset_type_id="7" parent_asset_id="65" morale_id="2" visibility="5" order_seq="30"/>
+<asset asset_id="73" asset_type_id="7" parent_asset_id="65" morale_id="2" visibility="5" order_seq="30"/>
+<asset asset_id="74" asset_type_id="7" parent_asset_id="65" morale_id="2" visibility="5" order_seq="30"/>
+<asset asset_id="75" name="+1 PC" asset_type_id="9" parent_asset_id="66" morale_id="1" visibility="5" order_seq="22"/>
+<asset asset_id="76" asset_type_id="7" parent_asset_id="66" morale_id="1" visibility="5" order_seq="30"/>
+<asset asset_id="77" asset_type_id="7" parent_asset_id="66" morale_id="1" visibility="5" order_seq="30"/>
+<asset asset_id="78" asset_type_id="7" parent_asset_id="66" morale_id="1" visibility="5" order_seq="30"/>
+<asset asset_id="79" asset_type_id="8" zone_id="3" command_id="12" visibility="2" order_seq="20"/>
+<asset asset_id="80" name="+1 PC" asset_type_id="9" parent_asset_id="79" morale_id="1" visibility="5" order_seq="22"/>
+<asset asset_id="81" asset_type_id="7" parent_asset_id="79" morale_id="1" visibility="5" order_seq="30"/>
+<asset asset_id="82" asset_type_id="7" parent_asset_id="79" morale_id="1" visibility="5" order_seq="30"/>
+<asset asset_id="83" name="1/4th B" asset_type_id="13" zone_id="2" parent_asset_id="92" command_id="10" visibility="1" order_seq="10"/>
+<asset asset_id="84" name="1/4th C" asset_type_id="13" zone_id="2" parent_asset_id="92" command_id="10" visibility="1" order_seq="10"/>
+<asset asset_id="85" name="2/4th C" asset_type_id="13" zone_id="7" parent_asset_id="93" command_id="2" visibility="1" order_seq="10"/>
+<asset asset_id="86" name="2/4th B" asset_type_id="13" zone_id="7" parent_asset_id="93" command_id="2" visibility="1" order_seq="10"/>
+<asset asset_id="88" name="+1CC" asset_type_id="12" parent_asset_id="86" visibility="5" order_seq="12"/>
+<asset asset_id="89" asset_type_id="8" parent_asset_id="86" visibility="2" order_seq="20"/>
+<asset asset_id="90" asset_type_id="8" parent_asset_id="86" visibility="2" order_seq="20"/>
+<asset asset_id="91" asset_type_id="8" parent_asset_id="86" visibility="2" order_seq="20"/>
+<asset asset_id="92" name="1/4th Infantry" asset_type_id="16" parent_asset_id="94" command_id="2" visibility="1"/>
+<asset asset_id="93" name="2/4th Infantry" asset_type_id="16" parent_asset_id="94" command_id="2" visibility="1"/>
+<asset asset_id="94" name="4th" asset_type_id="28" zone_id="1" command_id="14" visibility="1" order_seq="0"/>
+<asset asset_id="95" name="+2 CC" asset_type_id="12" parent_asset_id="83" visibility="5" order_seq="12"/>
+<asset asset_id="96" asset_type_id="8" parent_asset_id="83" visibility="2" order_seq="20"/>
+<asset asset_id="97" asset_type_id="8" parent_asset_id="83" visibility="2" order_seq="20"/>
+<asset asset_id="98" asset_type_id="8" parent_asset_id="83" visibility="2" order_seq="20"/>
+<asset asset_id="99" name="+2 CC Braun" asset_type_id="12" parent_asset_id="84" visibility="5" order_seq="12"/>
+<asset asset_id="100" asset_type_id="8" parent_asset_id="84" visibility="2" order_seq="20"/>
+<asset asset_id="101" asset_type_id="8" parent_asset_id="84" visibility="2" order_seq="20"/>
+<asset asset_id="102" asset_type_id="8" parent_asset_id="84" visibility="2" order_seq="20"/>
+<asset asset_id="103" asset_type_id="7" parent_asset_id="100" visibility="5" order_seq="30"/>
+<asset asset_id="104" asset_type_id="7" parent_asset_id="100" visibility="5" order_seq="30"/>
+<asset asset_id="105" asset_type_id="7" parent_asset_id="100" visibility="5" order_seq="30"/>
+<asset asset_id="106" asset_type_id="7" parent_asset_id="98" visibility="5" order_seq="30"/>
+<asset asset_id="107" asset_type_id="7" parent_asset_id="98" visibility="5" order_seq="30"/>
+<asset asset_id="108" asset_type_id="7" parent_asset_id="98" visibility="5" order_seq="30"/>
+<asset asset_id="109" asset_type_id="7" parent_asset_id="97" visibility="5" order_seq="30"/>
+<asset asset_id="110" asset_type_id="7" parent_asset_id="97" visibility="5" order_seq="30"/>
+<asset asset_id="111" asset_type_id="7" parent_asset_id="97" visibility="5" order_seq="30"/>
+<asset asset_id="112" asset_type_id="9" parent_asset_id="96" visibility="5" order_seq="22"/>
+<asset asset_id="113" asset_type_id="7" parent_asset_id="96" visibility="5" order_seq="30"/>
+<asset asset_id="114" asset_type_id="7" parent_asset_id="96" visibility="5" order_seq="30"/>
+<asset asset_id="115" asset_type_id="7" parent_asset_id="96" visibility="5" order_seq="30"/>
+<asset asset_id="116" asset_type_id="9" parent_asset_id="97" visibility="5" order_seq="22"/>
+<asset asset_id="117" asset_type_id="9" parent_asset_id="98" visibility="5" order_seq="22"/>
+<asset asset_id="118" asset_type_id="9" parent_asset_id="100" visibility="5" order_seq="22"/>
+<asset asset_id="119" asset_type_id="9" parent_asset_id="101" visibility="5" order_seq="22"/>
+<asset asset_id="120" asset_type_id="7" parent_asset_id="101" visibility="5" order_seq="30"/>
+<asset asset_id="121" asset_type_id="7" parent_asset_id="101" visibility="5" order_seq="30"/>
+<asset asset_id="122" asset_type_id="7" parent_asset_id="101" visibility="5" order_seq="30"/>
+<asset asset_id="123" asset_type_id="9" parent_asset_id="102" visibility="5" order_seq="22"/>
+<asset asset_id="124" asset_type_id="7" parent_asset_id="102" visibility="5" order_seq="30"/>
+<asset asset_id="125" asset_type_id="7" parent_asset_id="102" visibility="5" order_seq="30"/>
+<asset asset_id="126" asset_type_id="7" parent_asset_id="102" visibility="5" order_seq="30"/>
+<asset asset_id="127" asset_type_id="17" zone_id="7" parent_asset_id="92" visibility="5"/>
+<asset asset_id="128" name="3/4th Infantry" asset_type_id="16" zone_id="9" parent_asset_id="94" command_id="16" visibility="1"/>
+<asset asset_id="129" name="3/4th A" asset_type_id="13" zone_id="8" parent_asset_id="128" visibility="1" order_seq="10"/>
+<asset asset_id="130" name="3/4th B" asset_type_id="13" zone_id="3" parent_asset_id="128" command_id="8" visibility="1" order_seq="10"/>
+<asset asset_id="131" name="3/4th C" asset_type_id="13" zone_id="3" parent_asset_id="128" command_id="8" visibility="1" order_seq="10"/>
+<asset asset_id="132" asset_type_id="12" parent_asset_id="129" visibility="5" order_seq="12"/>
+<asset asset_id="133" asset_type_id="8" parent_asset_id="129" visibility="2" order_seq="20"/>
+<asset asset_id="134" asset_type_id="8" parent_asset_id="129" visibility="2" order_seq="20"/>
+<asset asset_id="135" asset_type_id="8" parent_asset_id="129" visibility="2" order_seq="20"/>
+<asset asset_id="136" asset_type_id="12" parent_asset_id="130" visibility="5" order_seq="12"/>
+<asset asset_id="137" asset_type_id="10" parent_asset_id="130" visibility="5"/>
+<asset asset_id="138" asset_type_id="8" parent_asset_id="130" visibility="2" order_seq="20"/>
+<asset asset_id="139" asset_type_id="8" parent_asset_id="130" visibility="2" order_seq="20"/>
+<asset asset_id="140" asset_type_id="8" parent_asset_id="130" visibility="2" order_seq="20"/>
+<asset asset_id="141" asset_type_id="12" parent_asset_id="131" visibility="5" order_seq="12"/>
+<asset asset_id="142" asset_type_id="8" parent_asset_id="131" visibility="2" order_seq="20"/>
+<asset asset_id="143" asset_type_id="8" parent_asset_id="131" visibility="2" order_seq="20"/>
+<asset asset_id="144" asset_type_id="8" parent_asset_id="131" visibility="2" order_seq="20"/>
+</assets>
+<asset_categorys>
+<asset_category asset_category_id="1" name="Building"/>
+<asset_category asset_category_id="2" name="Unit"/>
+</asset_categorys>
+<asset_types>
+<asset_type asset_type_id="1" name="Bridge" asset_category_id="1" visibility="1"/>
+<asset_type asset_type_id="2" name="AA Gun" asset_category_id="1" visibility="1"/>
+<asset_type asset_type_id="3" name="Airfield" asset_category_id="1" visibility="1"/>
+<asset_type asset_type_id="4" name="Radar" asset_category_id="1" visibility="1"/>
+<asset_type asset_type_id="5" name="Artillery" asset_category_id="1" visibility="1"/>
+<asset_type asset_type_id="6" name="Stug III" asset_category_id="2" visibility="5" css_class="vehicle"/>
+<asset_type asset_type_id="7" name="Rifle Squad" asset_category_id="2" visibility="5" order_seq="30"/>
+<asset_type asset_type_id="8" name="Rifle Platoon" asset_category_id="2" visibility="2" order_seq="20" css_class="platoon"/>
+<asset_type asset_type_id="9" name="Platoon Commander" asset_category_id="2" visibility="5" order_seq="22"/>
+<asset_type asset_type_id="10" name="HMG" asset_category_id="2" visibility="5"/>
+<asset_type asset_type_id="11" name="5.0cm PAK 38 Anti-tank Gun, with optional tow" asset_category_id="2" visibility="5" css_class="atg"/>
+<asset_type asset_type_id="12" name="Company Commander" asset_category_id="2" visibility="5" order_seq="12"/>
+<asset_type asset_type_id="13" name="Company" asset_category_id="2" visibility="1" order_seq="10" css_class="company"/>
+<asset_type asset_type_id="14" name="Factory" asset_category_id="1" visibility="1"/>
+<asset_type asset_type_id="16" name="Battalion" asset_category_id="2" visibility="1" css_class="battalion"/>
+<asset_type asset_type_id="17" name="Battalion Commander" asset_category_id="2" visibility="5"/>
+<asset_type asset_type_id="18" name="SMG Squad" asset_category_id="2" visibility="5" order_seq="30"/>
+<asset_type asset_type_id="19" name="50mm Mortar" asset_category_id="2" visibility="1"/>
+<asset_type asset_type_id="20" name="HMG + Truck" asset_category_id="2" visibility="5"/>
+<asset_type asset_type_id="21" name="81mm Mortar + Truck" asset_category_id="2" visibility="5"/>
+<asset_type asset_type_id="22" name="75mm Recoiless Gun" asset_category_id="2" visibility="5"/>
+<asset_type asset_type_id="23" name="81mm Mortar" asset_category_id="2" visibility="5"/>
+<asset_type asset_type_id="24" name="120mm Mortar" visibility="5"/>
+<asset_type asset_type_id="25" name="PAK 40 Anti-Tank Gun with Tractor" asset_category_id="2" visibility="5" css_class="atg"/>
+<asset_type asset_type_id="26" name="251/1 Half Track" asset_category_id="2" visibility="5" order_seq="0" css_class="vehicle"/>
+<asset_type asset_type_id="27" name="Pz III" asset_category_id="2" visibility="5" order_seq="0" css_class="vehicle"/>
+<asset_type asset_type_id="28" name="Regiment" asset_category_id="2" visibility="1" order_seq="0" css_class="regiment"/>
+<asset_type asset_type_id="29" name="Division" asset_category_id="2" visibility="1" order_seq="0" css_class="division"/>
+</asset_types>
+<channels>
+<channel channel_id="1" name="Allies" zone_id="0" faction_id="1"/>
+<channel channel_id="2" name="Allies - Humber" zone_id="2" faction_id="1"/>
+<channel channel_id="3" name="Allies - Jubilee" zone_id="4" faction_id="1"/>
+</channels>
+<commands>
+<command command_id="-1" user_id="1" faction_id="0" name="System" seniority="0" map_id="0"/>
+<command command_id="1" user_id="2" faction_id="1" name="Lt. Col Orlov" seniority="2" map_id="1" zone_id="1"/>
+<command command_id="2" user_id="0" faction_id="2" name="Oberstleutnant Schmidt" seniority="2" map_id="0" parent_command_id="14" zone_id="1"/>
+<command command_id="3" faction_id="1" name="Captain Ivanov" seniority="3" map_id="2" parent_command_id="1" zone_id="4"/>
+<command command_id="4" faction_id="2" name="Hauptmann Muller" seniority="3" map_id="2" parent_command_id="2" zone_id="4"/>
+<command command_id="5" faction_id="1" name="Captain Nachimovsky" seniority="3" map_id="0" parent_command_id="0" zone_id="3"/>
+<command command_id="6" faction_id="2" name="Hauptmann Ramcke" seniority="3" map_id="0" parent_command_id="2" zone_id="3"/>
+<command command_id="8" faction_id="2" name="Hauptmann Neufeldt" seniority="3" map_id="0" parent_command_id="16" zone_id="3"/>
+<command command_id="10" faction_id="2" name="Hauptmann Braun" seniority="3" map_id="0" parent_command_id="2" zone_id="2"/>
+<command command_id="12" faction_id="2" name="Leutnant Schmidt" seniority="4" map_id="0" parent_command_id="6" zone_id="3"/>
+<command command_id="14" faction_id="2" name="Oberst Weiss" seniority="1" map_id="0" zone_id="1"/>
+<command command_id="16" faction_id="0" name="Oberstleutnant Heinlein" seniority="2" map_id="0" parent_command_id="14" zone_id="1"/>
+</commands>
+<event_types>
+<event_type event_type_id="1" name="Message"/>
+<event_type event_type_id="2" name="Air Strike"/>
+<event_type event_type_id="3" name="Artillery Strike"/>
+<event_type event_type_id="4" name="Resupply"/>
+<event_type event_type_id="5" name="Parachute Drop"/>
+<event_type event_type_id="6" name="Combat Air Patrol"/>
+</event_types>
+<factions>
+<faction faction_id="1" name="Allies" game_id="0" faction_icon_id="4"/>
+<faction faction_id="2" name="Axis" game_id="0" faction_icon_id="5"/>
+</factions>
+<games>
+</games>
+<maps>
+<map map_id="0" name="Axe" width="1280" height="600" background="map_4.jpg" x="336" y="49" scale="10" zone_id="5"/>
+<map map_id="1" name="Overall" width="1000" height="620" background="c1/map_0.jpg" x="0" y="0" scale="1" zone_id="1"/>
+<map map_id="2" name="Kennet" width="864" height="432" background="c1/map_1.jpg" x="186" y="392" scale="5" zone_id="3"/>
+<map map_id="3" name="Jubilee" width="648" height="432" background="c1/map_2.jpg" x="430" y="270" scale="5" zone_id="4"/>
+</maps>
+<messages>
+<message message_id="1" from_command_id="1" zone_id="4" content="No reinforcements currently available. Hold until further orders." channel_id="3"/>
+<message message_id="2" from_command_id="3" zone_id="4" content="Two German companies attacking with Stug. Losing Ground" channel_id="3" x="500" y="300" message_type_id="7"/>
+<message message_id="3" from_command_id="1" zone_id="8" content="High command is keen to construct a new bridge over the river, and want the area at Easy-Six surveyed by pioneers. The river is wide there and shallow, with a gravel bed, and it may be possible to cross there immediately (albeit a bit slowly), but even if it isn't, there are now British engineer teams with bridging equipment only a little to the rear which could advance and create a pontoon bridge very quickly. High Command is keen on this idea, because there are retreating Germans to the west of your map that could be cut off if a large armoured column could get across the Muhlbach by this evening. The bridges in the towns in this area are old stone bridges and not suited to very large armoured columns, and may be in uncertain hands and are in built-up areas which constrict movement" channel_id="2" message_type_id="8"/>
+</messages>
+<message_types>
+<message_type message_type_id="1" name="Reinforcement Request"/>
+<message_type message_type_id="2" name="Support Request"/>
+<message_type message_type_id="3" name="Objective Completed"/>
+<message_type message_type_id="4" name="Objective Failed"/>
+<message_type message_type_id="5" name="Reinforcements Arrived"/>
+<message_type message_type_id="6" name="Forces Dispatched"/>
+<message_type message_type_id="7" name="Sit Rep"/>
+<message_type message_type_id="8" name="Briefing"/>
+</message_types>
+<model_types>
+<model_type model_type_id="1" name="Ork" m="4" ws="3" bs="3" s="3" t="4" w="1" i="2" a="1" ld="7" intel="6" cl="7" wp="7"/>
+<model_type model_type_id="2" name="Marine" m="4" ws="4" bs="4" s="4" t="4" w="1" i="4" a="1" ld="8" intel="8" cl="8" wp="8"/>
+</model_types>
+<morales>
+<morale morale_id="1" name="Green"/>
+<morale morale_id="2" name="Regular"/>
+<morale morale_id="3" name="Veteran"/>
+</morales>
+<users>
+<user user_id="1" username="admin" guid="aaa"/>
+<user user_id="2" username="monty" guid="bbb"/>
+</users>
+<zones>
+<zone zone_id="1" game_id="10" zone_type_id="1" name="Battlefield" x="0" y="0" map_id="0" scale="1"/>
+<zone zone_id="2" game_id="10" zone_type_id="2" name="Humber" x="450" y="120" map_id="1" parent_zone_id="1" width="86" height="129" scale="5"/>
+<zone zone_id="3" game_id="10" zone_type_id="2" name="Kennet" x="186" y="392" map_id="1" parent_zone_id="1" width="172" height="86" scale="5"/>
+<zone zone_id="4" game_id="10" zone_type_id="2" name="Jubilee" x="430" y="270" map_id="1" parent_zone_id="1" width="129" height="86" scale="5"/>
+<zone zone_id="5" game_id="10" zone_type_id="2" name="Axe" x="580" y="180" map_id="1" parent_zone_id="1" width="86" height="86" scale="5"/>
+<zone zone_id="7" game_id="10" zone_type_id="0" name="Reserve Area A" x="200" y="150" map_id="1" parent_zone_id="1" scale="5"/>
+<zone zone_id="8" game_id="10" zone_type_id="2" name="Dee" x="240" y="200" map_id="1" parent_zone_id="1" width="86" height="172" scale="5"/>
+<zone zone_id="9" game_id="10" name="Reserve Area B" x="80" y="350" map_id="1" parent_zone_id="1" scale="5"/>
+<zone zone_id="15" game_id="10" x="0" y="0"/>
+</zones>
+<zone_types>
+<zone_type zone_type_id="1" name="Area"/>
+<zone_type zone_type_id="2" name="Battlefield"/>
+<zone_type zone_type_id="3" name="Feature"/>
+<zone_type zone_type_id="4" name="Bridge" icon="4_16.png"/>
+<zone_type zone_type_id="5" name="Airfield"/>
+<zone_type zone_type_id="6" name="AA Emplacement"/>
+<zone_type zone_type_id="7" name="Radar"/>
+</zone_types>
+</data>
