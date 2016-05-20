@@ -96,7 +96,7 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt">
       <textarea id="txtMessage" rows="4" cols="50"></textarea>
       <img class="button" src="images/controls/go_48.png" style="cursor:pointer;" onclick="game.messages.send();"/>
     </div>
-    <xsl:for-each select="/data/messages/message">
+    <xsl:for-each select="/data/messages/message[@zone_id=$CURRZONE/@zone_id]">
       <xsl:sort select="@message_id" order="descending"/>
       <xsl:variable name="MESSAGE" select="." />
       <div>
